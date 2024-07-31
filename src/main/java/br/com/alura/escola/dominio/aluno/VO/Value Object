@@ -1,0 +1,4 @@
+não é uma entidade, classe Email|Cpf|Telefone é um VALUE OBJECT (VO), pois não há um atributo que
+seja o id do objeto para identifica-lo, no caso da classe Aluno o id é o cpf.  Se dois e-mails possuem o mesmo
+endereço, podemos considerá-los como o mesmo e-mail. Já duas pessoas com o nome, altura e idade não
+necessariamente são a mesma pessoa.

@@ -1,0 +1,16 @@
+O conceito do domínio, ou seja, o repositório é uma interface, nós podemos implementar essa interface
+na camada de infraestrutura e ter múltiplas implementações.
+
+Pode ser uma implementação em memória, uma implementação com banco de dados via JDBC, com banco de dados via JPA,
+ com banco de dados não relacional, em arquivo, entre outras. Cada implementação pode ser uma classe separada e
+  cada uma terá seu código distinto. Todas seguirão a interface, todas devem seguir o contrato e ter esses
+  três métodos, mas como esses métodos serão implementados, cada implementação vai fazer de um jeito distinto.
+
+O mais bacana é que o código de domínio não fica preso, não fica dependente desse código de implementação.
+Então, se acabamos de criar outra implementação em memória, nós apenas codificamos isso na camada de infra,
+ sem que fosse necessário mexer em nada na camada de domínio.
+
+A camada de domínio está totalmente desacoplada e independente da infraestrutura e dos detalhes de
+implementação. Isso torna o código muito mais fácil de evoluir. Nós conseguimos trocar esse mecanismo de
+persistência sem afetar nada, sem ter que mexer em nada na camada de domínio, pois, afinal, nenhuma regra
+de negócio foi alterada. Portanto, não faz sentido mexermos na camada de domínio.
